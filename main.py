@@ -1,38 +1,9 @@
-## Coded by: Lucas Faiad
+## Coded by Lucas-Faiad
 
-import random
-class Lottery:
-    def __init__(self):
-        self.numbers = None
-        pass
-
-
-    def select_lottery(self):
-        print("Please, select the type of lottery:")
-        type_lottery = str(input("(1)Mega-sena (2)Loto-facil (3)..."))
-        type_lottery.strip().lower()
-        if  type_lottery == "mega-sena" or type_lottery == "1":
-            self.numbers = 60
-            Mega_Cena.exec
-        else:
-            print("ERROR")
-
-
-    def exec(self):
-        Lottery.select_lottery
-        print("Oi")
-
-class Mega_Cena(Lottery):
-    def __init__(self):
-        self.bet = int(input("Quantos numeros voce deseja marcar?\n"))
-
-    @property
-    def sorteando(self):
-        guessed = random.sample(range(1,60),self.bet)
-        print(guessed)
-    
-    @property
-    def exec(self):
-        Mega_Cena.sorteando
-
-Lottery.select_lottery(self=self)
+import Loto_facil
+import Mega_sena
+loteria = str(input("Qual loteria voce deseja aposta?\n(1)Mega sena (2)Loto Facil")).lower()
+if loteria == "1" or loteria == "mega sena":
+    Mega_sena.Mega()
+elif loteria == "2" or loteria == "loto facil":
+    Loto_facil.Loto()
